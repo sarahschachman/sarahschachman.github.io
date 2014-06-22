@@ -184,7 +184,12 @@ p {
 	text-align: left;
 }
 
+#gallery img {
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+}
 #gallery img:hover{
 	cursor:pointer;
-	-webkit-opacity: 0.5;
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0);
 }

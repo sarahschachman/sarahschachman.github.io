@@ -167,6 +167,7 @@ p {
 	display: inline;
 	float: left;
 	margin-right: 120px;
+	margin-bottom: 120px;
 }
 
 .footer {
@@ -176,7 +177,12 @@ p {
 #paragraphs {
 	color: #595959;
 	margin-right: 100px;
-	margin-bottom: 120px;
+	margin-bottom: 70px;
+}
+
+#paragraphs a {
+	color: #48CDC9;
+	font-weight: heavy;
 }
 
 #paratitle {

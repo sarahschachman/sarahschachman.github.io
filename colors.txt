@@ -1,4 +1,0 @@
-green: #4CCD48
-pink: #E4509E
-light mint: #50E4E0
-dark mint: #48CDC9

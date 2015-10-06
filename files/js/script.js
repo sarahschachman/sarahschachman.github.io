@@ -459,3 +459,51 @@ $(function() {
 // Change the speed to whatever you want
 // Personally i think 1000 is too much
 // Try 800 or below, it seems not too much but it will make a difference
+
+$('.comingsoon1').hover(
+    function() {
+        var $this = $(".comingsoon-text1"); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Coming soon");
+    },
+    function() {
+        var $this = $(".comingsoon-text1"); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.comingsoon2').hover(
+    function() {
+        var $this = $(".comingsoon-text2"); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Coming soon");
+    },
+    function() {
+        var $this = $(".comingsoon-text2"); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.comingsoon3').hover(
+    function() {
+        var $this = $(".comingsoon-text3"); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Coming soon");
+    },
+    function() {
+        var $this = $(".comingsoon-text3"); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+
+$('.comingsoon4').hover(
+    function() {
+        var $this = $(".comingsoon-text4"); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Coming soon");
+    },
+    function() {
+        var $this = $(".comingsoon-text4"); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);

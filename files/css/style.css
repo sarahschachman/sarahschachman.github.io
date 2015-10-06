@@ -86,7 +86,10 @@ audio:not([controls]) { display: none; }
 [hidden] { display: none; visibility: hidden; }
 
 
-
+@font-face {
+     font-family: ProximaNova-Light-webfont;
+     src: url('files/fonts/ProximaNova-Light-webfont.ttf'); 
+}
 
 /*----------------------------------------------
 1. BASICS
@@ -2224,5 +2227,19 @@ nav#main-nav ul li > a { color: #808080; }
 	background: #0d0d0d;
 }
 	
+span.highlight {
+    background-color: rgba(15, 216, 197, 0.90);
+		color: white;
+	line-height: 135%;
+}
 
+h2.tagline {
+	font-size: 45px;
+	padding-top: 0;
+}
 
+.single-pagination span {
+	background:#0FD8C5; 
+	padding: 20px;
+	color: white;
+}

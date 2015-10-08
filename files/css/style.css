@@ -2182,6 +2182,10 @@ header.header-open:not(.header-transparent) + #hero, header.header-open:not(.hea
 .colored {
 	color: #0FD8C5;
 	}
+a.colored:hover {
+	text-decoration: underline;
+	color: #0FD8C5;
+}
 
 a.sr-button2 { background: #0FD8C5; }
 
@@ -2194,8 +2198,8 @@ a.sr-button2 { background: #0FD8C5; }
 }
 
 #hero .page-title {
-	padding-top: 40px;
-	padding-bottom: 60px;
+	padding-top: 50px;
+	padding-bottom: 80px;
 	
 }
 
@@ -2216,7 +2220,7 @@ nav#main-nav ul li > a { color: #808080; }
      transform:scale(1.05);
 	}
 
-.single-pagination li.backtoworks a:hover { color: #0FD8C5; }
+
 
 .tagline {
 	padding-top: 45px;
@@ -2228,18 +2232,35 @@ nav#main-nav ul li > a { color: #808080; }
 }
 	
 span.highlight {
-    background-color: rgba(15, 216, 197, 0.90);
-		color: white;
-	line-height: 135%;
+  background-color: rgba(15, 216, 197, 0.85);
+	color: white;
+	line-height: 130%;
+	font-size: 56px;
 }
 
 h2.tagline {
-	font-size: 45px;
+	font-size: 56px;
 	padding-top: 0;
 }
 
+.single-pagination li.backtoworks a:hover { color: #0FD8C5; }
+
+
 .single-pagination span {
-	background:#0FD8C5; 
-	padding: 20px;
-	color: white;
+	background:#0d0d0d; 
+	padding: 10px;
+	color: pink;
 }
+
+footer #backtotop:hover { color: #0FD8C5; }
+
+.single-pagination li a img + span {
+    color: #fff !important;
+}
+
+/* logo height + header-inner margin (30px + 2*60px) */
+#page-body { padding-top: 130px; }
+header:after { top: -130px; height: 130px; }
+header.header-open:not(.header-transparent) + #hero, header.header-open:not(.header-transparent) + #page-body { margin-top: 130px; }
+#header-filter, #header-share { top: -130px;	 min-height: 130px; }
+@media only screen and (max-width: 1024px) { nav#main-nav { top: 130px !important; } }

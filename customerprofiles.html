@@ -69,9 +69,10 @@
 
 							</li>
 
-							<li><a href="index.html#contact">Contact</a></li>
+							
 
 							<li><a href="index.html#resume">Resume</a></li>
+							<li><a href="index.html#contact">Contact</a></li>
 						</ul>
 					</nav>
 
@@ -128,9 +129,9 @@
             
             <h6><strong>Overview</strong></h6>
             <p class="alttitle">June 2 - August 27, 2015</p>
-            <p>Snapsale is fun way to discover new stores and products while saving ridiculous amounts of money. If you see something you like, you have to hurry, because it’ll be gone in a flash — once the picture disappears the deal is gone. It’s the impulse buyer’s dream. Basically, Snapsale is Snapchat for flash sales.
-<br><br>
-Snapsale is an idea we came up with for Hackdays, Shopify’s quarterly hackathon. We wanted to take advantage of Shopify’s capabilities by having it integrate into the Shopify admin. This would make it easy for merchants to use Snapsale with their pre-existing stores and create Snapsales with almost zero effort.</p>
+            <p>A strong connection with customers is essential to small and medium businesses. Being able to provide a more personal experience is a unique advantage of businesses at this scale, and it is what keeps customers returning. To make this happen, merchants want to be able to know their top customers and reward them; to identify sale shoppers and send them relevant emails; to remember their size and style in order to suggest the right items; to understand their history with the business in order to provide them with better service in the future.</p>
+            
+					
           	
            	
 		</div>
@@ -139,84 +140,131 @@ Snapsale is an idea we came up with for Hackdays, Shopify’s quarterly hackatho
            
      <div class="wrapper">
         	<ul class="gallery gallery-col2 spaced">
-						<li class="has-animation"><a href="files/uploads/snapsalelogo.png" data-rel="lightcase"><img src="files/uploads/snapsalelogo.png" alt="snapsale logo"/></a></li>
-						<li class="has-animation" data-delay="200"><a href="files/uploads/snapsalewhiteboard.png" data-rel="lightcase"><img src="files/uploads/snapsalewhiteboard.png" alt="snapsale whiteboard"/></a></li>
+						<li class="has-animation"><a href="files/uploads/annacloseup.png" data-rel="lightcase"><img src="files/uploads/annacloseup.png" alt="closeup"/></a></li>
+						<li class="has-animation" data-delay="200"><a href="files/uploads/recentpurchases.png" data-rel="lightcase"><img src="files/uploads/recentpurchases.png" alt="recent orders"/></a></li>
             </ul>
 		</div>
+
    
-   <div class="spacer spacer-small"></div>
+ 
    
-    <div class="wrapper-small">                 	
-                      	           	           	
-            <h6><strong>The Problem</strong></h6>
-            <p>From a shopper’s point of view, flash sales are pretty awesome, but who likes opening an email about a sale for their favorite store… 1 hour after it’s ended? And as a merchant, planning for them is tedious — as a customer, waiting around for them isn’t too fun either. We saw an opportunity to game-ify flash sales to make them more fun and easy for both merchants and customers.</p>
+    <div class="wrapper-small"> 
+             <h6><strong>The Problem</strong></h6>
+<p>Recently, Shopify’s admin was simply a table of the customer's purchase history. While better than nothing, of course, this doesn’t help the merchant understand at a glance who this person is and how they should interact with them. There is a plethora of data sets in tables all over the admin, but the difference in the profile is that it represents a real person. Customers are not just tables of purchase data. The goal of this project was to redesign the customer profile to make it more human, and to give merchants the tools to gain a better understanding of the people that support their business.</p>
+           
+            <h6><strong>Deliverable</strong></h6>
+            <p>During my internship at Shopify, I worked on completely redesigning the customer profile section of the admin. Going off of research that had been done previously, I dove right into sketching ideas (about 3 gazillion of them). My work over the summer consisted of cycles of rough sketches of information architecture, wireframing and user flow studies, and high-fidelity mockups. By the time I left, the design was polished and prepared for implementation. The revamped profile should be shipping sometime soon :)</p>         	           	           	                	        	           	           	                	
+                      	           	           
             
             
-            <h6><strong>Constraints</strong></h6>
-            <p>With less than two days to come up with an idea and build a polished, presentable proof of concept, we needed to move fast. This was made even more difficult by the fact that we needed to build something in React Native, which was new to all 4 of the developers on my team. Also, with such an intense time constraint, we couldn’t spend too much time on research and ideation. We needed to iron out a solid idea and wireframe the user flow so that the developers could start coding immediately. If we had more time, we could have spent it on doing user research on our target audience, and testing out prototypes to find the kinks in our design. Unfortunately, we needed to lock down the basic flow early on, so only 25% of my time was spent on defining the user experience, and the rest was on designing the branding and UI.</p>
+            <h6><strong>Research and Brainstorming</strong></h6>
+            <p>Some background research had been done before I arrived, which included interviews with a few local merchants that had both an online and brick and mortar store. After sifting through the research, we identified a few pain points. Then, we had a brainstorming meeting to see what features we want to bring into the redesign, what information we can surface to best benefit the merchants, decide what is feasible, and prioritize our ideas.</p>
+
+           <p>We ended up with a list key goals we wanted our merchants to accomplish with the new customer profile (in the form of job stories):</p>
+           <ul>
+           	<li>When a customer comes into a store, the merchant wants to quickly pull up their profile, so that the merchant can <strong>quickly see what kind of customer they are.</strong></li>
+           	<li>When the merchant pulls up a customer profile, they want to be able to quickly see the customer’s past orders, so that the merchant knows <strong>what kinds of products the customer likes.</strong></li>
+           	<li>When the merchant pulls up a customer profile, they want to quickly see the customer’s lifetime value, so that the merchant knows <strong>how important the customer is to the business.</strong></li>
+           	<li>When the merchant pulls up a customer profile, the merchant wants to see what brand the customer usually buys, so that the merchant can <strong>let the customer know about new items that came in.</strong></li>
+           	<li>When the merchant pulls up the customer profile, the merchant wants to know the customer’s sizing, so that they can <strong>delight the customer by giving them the right size without asking</strong></li>
+           	<li>When a merchant onboards a new staff member, the merchant wants to quickly pull up the business’s most important customers, so that the staff member <strong>recognizes the important customers when they enter the store.</strong></li>
+           	<li>After a customer leaves the store, the merchant wants to quickly write down a note about the interaction, so that the merchant can <strong>follow up with the customer later.</strong></li>
+           </ul>
+           <p>With these key goals in mind, I started sketching out possible layouts. I had to keep information architecture in mind — what is the most critical information to be displayed, and what is the hierarchy going to look like? I also had to be creative with data visualizations. I needed to make the profile quick and easy to digest. Tables of data was exactly what I needed to steer away from. My main goal was to take this heap of data about a customer, and make it look more like the human it is representing.</p>
             
 		</div>
          
          <div class="spacer spacer-small"></div>
           
-           <div class="wrapper">
-           	<ul class="gallery spaced">
-							<li class="has-animation"><a href="files/uploads/snapsaleflow.png" data-rel="lightcase"><img src="files/uploads/snapsaleflow.png" alt="snapsale flow"/></a></li>
-            </ul>
-           </div>
-           
-		<div class="spacer spacer-small"></div>
+    <div class="wrapper">
+				<ul class="gallery gallery-col3 spaced">
+					<li class="has-animation"><a href="files/uploads/bookcrease.png" data-rel="lightcase"><img src="files/uploads/bookcrease.png" alt="sketches"/></a></li>
+					<li class="has-animation" data-delay="200"><a href="files/uploads/postits.png" data-rel="lightcase"><img src="files/uploads/postits.png" alt="post its detail"/></a></li>
+					<li class="has-animation" data-delay="400"><a href="files/uploads/ideationsketches.png" data-rel="lightcase"><img src="files/uploads/ideationsketches.png" alt="sketches"/></a></li>
+				</ul>
+		</div>
+
            
            <div class="wrapper-small">
             
-            <h6><strong>Designing the User Experience</strong></h6>
-            <p class="alttitle">Merchant perspective</p>
-            <p>If I am a merchant who wants to reach more impulse-buy customers through the Snapsale app, all I need to do is go to the Shopify app store to integrate it into my store admin. Now in my admin I will have a Snapsale page, which shows me any current Snapsales I may have running, along with any past sales. Both current sales and past sales will show me interesting statistics, including how much time left (for current sales), my stock level, how many people have opened the snapsale, and how much money earned from the sale. When making a new sale, I simply decide the product I want to use (making sure my stock is high enough), and then I decide the sale price and the amount of time I want it to be available (default is 24 hours).</p>
-            <p class="alttitle">Customer perspective</p>
-            <p>If I am a customer who wants to discover new products and amazing deals, then all I have to do is download Snapsale and wait for merchants to send out sales. The app needs to be fun and simple to use so that customers are delighted when they discover a great deal on a cool product, and feel rewarded when they make a purchase. There’s no required login or forms until you make a purchase, so users can see the value of the app and become invested before the app presents them with the entering-information obstacle. When a merchant sends out a snapsale, it shows up on my home screen showing which store it is from and how much time I have left to open it (usually 24 hours, but it can be however long the merchant wants the flash sale to be available). When I open a snapsale, I see a photo of the product, its price (including how much I’m saving). I have 60 seconds to make a decision, with the time counting down in the corner. If I want to learn more, I can click on the info button, which will pause the timer. There I can read the product description, the store name, and see available product options (e.g. size or color). If I don’t want to buy it, I can dismiss it and it disappears from my home screen. Otherwise, I can click the buy button. If this is my first time making a purchase, it will ask me for my payment and shipping info. Now it will be saved, so I don’t have to do it again. However, I can always edit this in my profile. Now there is a success message which tells me that my product is on its way, and the day it is going to arrive. Yay! Impulse buying and product discovery made fun and easy. (Almost too easy?)</p>
-            <p class="alttitle">The Process</p>
-            <p>To design these flows, I thought about job stories, or objectives that they each needed to accomplish, and broke those larger goals down into finite steps. I brainstormed screens that could facilitate this flow of actions and make sense going from step to step.</p>
-		</div>
+            <h6><strong>The Design Process</strong></h6>
+            <p>I completed a multitude of rough sketches and wireframes and received a ton of wonderful feedback from my mentor. After I decided on a few designs I liked, I started designing more high-fidelity versions in Sketch. There are an insane number of iterations that show the design progression. Shopify's twice-weekly feedback sessions were essential to helping me push my designs further.</p>
+            <p class="alttitle">Layout and components</p>
+            <p>All of Shopify's pages in the admin are formed with sets of primary cards (large and on the left) and secondary cards (smaller, subdued visual treatment, and on the right). While I did need to stay within Shopify's style guide, I had a lot of flexibilty in how to arrange the components and what the hierarchy would look like. Here are all the components I decided to implement on the page, each which serves a certain purpose in furthering the goals outlined above:</p>
+            <ul>
+            	<li><strong>The persona card:</strong> this is the first card on the profile, and the most important. We want the merchant to be able to look at this card and immediately understand the customer.</li>
+            	<li><strong>Order history card:</strong> this component is all about the data. One of the most important pieces needed to understand a customer's value to a company is their spending history data, and this card helps the merchant visualize the customer in terms of their data through graphs.</li>
+            	<li><strong>Recent order card:</strong> this card helps the merchant understand the customer better on a human level -- what kinds of things do they buy? Do they buy in bulk, do they buy mostly the same kinds of things? </li>
+            	<li><strong>Contact info card:</strong> this is the first secondary card. I decided to put the map here, paired with their addresses. The customer's phone number and email addresses are all here for convenient access.</li>
+            	<li><strong>Tags card:</strong> tags are a feature found all across the Shopify admin, and are an easy way for merchants to quickly denote any information they want about a customer in a very flexible format.</li>
+            	<li><strong>Trends card:</strong> this card pulls out key trends based upon data from past purchases. It helps the merchant quickly picture trends in what the customer has bought previously, and could help shape interactions with the customer in the future.</li>
+            </ul>
             
-   <div class="spacer spacer-small"></div>
+            <p>Now I will delve further into each component and show its evolution. The final result is at the very end!</p>
+            
+            
+
+			<p class="alttitle">Badges and primary card</p>
+            <p>The primary card of the profile needs to show what the merchant needs to know about the customer at a glance. This includes key metrics and their persona badges. The persona badges serve as a quickly identifiable representation of the customer, so that the merchant can immediately see what kind of customer this person is, and how important they are to the business. These badges would automatically show up on the profile if the customer meets certain requirements based upon their purchase history. This is the card that I played around with the most, because it is difficult to decide what kind of information is going to be the most important -- you can't overwhelm the user with dense information, and so I needed to keep it simple and to the point. I tried the primary card with a map of the customer's address, a histogram of their spending, and photos. In the end, I decided to go minimal and cut out superfluous or distracting information, and just focus on the persona badges, three key performance indicators, freeform notes, and a photo to humanize and distinguish the profile.</p>
+		</div>
+		
+		   <div class="spacer spacer-small"></div>
           
            <div class="wrapper">
            	<ul class="gallery spaced">
-							<li class="has-animation"><a href="files/uploads/journeys.png" data-rel="lightcase"><img src="files/uploads/journeys.png" alt="snapsale journeys"/></a></li>
+							<li class="has-animation"><a href="files/uploads/primaryiterations.png" data-rel="lightcase"><img src="files/uploads/primaryiterations.png" alt="snapsale journeys"/></a></li>
             </ul>
+           </div>
+
+  	 <div class="wrapper-small">
+           	<p class="alttitle">Graph exloration</p>
+            <p>Deciding how to synthesize a customer's purchase data to make it easy to digest and comprehend was one of the trickier parts of the process. I had to delve deep into data visualization best practices to come up with a solid representation.</p>
            </div>
            
 		<div class="spacer spacer-small"></div>
-           <div class="wrapper-small">
-            
-            <h6><strong>Designing the branding and UI</strong></h6>
-            <p>I wanted Snapsale’s visual identity to convey the feeling of excitement, playfulness, speed, and joy. It needed to be clean and focused, with minimal distractions and only a few actions on each page. Each page needed to have a clear purpose, with a consistency between pages.</p>
-            <p class="alttitle">The Process</p>
-            <p>From my wireframes, I went straight into high-fidelity mockups in Sketch (due to the time constraint of the project).</p>
-		</div>
-    
-           <div class="spacer spacer-small"></div>
+
                   
     <div class="wrapper">
-				<ul class="gallery gallery-col3 spaced">
-					<li class="has-animation"><a href="files/uploads/snapsaledetail2.png" data-rel="lightcase"><img src="files/uploads/snapsaledetail2.png" alt="snapsale detail"/></a></li>
-					<li class="has-animation" data-delay="200"><a href="files/uploads/snapsaledetail3.png" data-rel="lightcase"><img src="files/uploads/snapsaledetail3.png" alt="snapsale detail"/></a></li>
-					<li class="has-animation" data-delay="400"><a href="files/uploads/snapsaledetail1.png" data-rel="lightcase"><img src="files/uploads/snapsaledetail1.png" alt="snapsale detail"/></a></li>
+				<ul class="gallery gallery-col2 spaced">
+					<li class="has-animation"><a href="files/uploads/bargraphs.png" data-rel="lightcase"><img src="files/uploads/bargraphs.png" alt="snapsale detail"/></a></li>
+					<li class="has-animation" data-delay="200"><a href="files/uploads/bubblegraph.png" data-rel="lightcase"><img src="files/uploads/bubblegraph.png" alt="snapsale detail"/></a></li>
+					
 				</ul>
 		</div>
-   
-   	<div class="spacer spacer-small"></div>
+  	
+  	<div class="wrapper-small">
+           	<p class="alttitle">Recent purchases exloration</p>
+            <p>Being able to view a customer's past orders is one of the key components of the customer profile, and has a lot to tell about the type of customer they are. However, in the previous version of customer profiles, merchants can only view the customer's orders as a list. While this makes it easy to scan and compare, it doesn't help the merchant understand the customer at a glance. I wanted to show the orders in such a way that merchants could spot trends by viewing the orders along with their contents.</p>
+           </div>
+           
+		<div class="spacer spacer-small"></div>
+
+                  
+    <div class="wrapper">
+				<ul class="gallery gallery-col2 spaced">
+					<li class="has-animation"><a href="files/uploads/recentorderslist.png" data-rel="lightcase"><img src="files/uploads/recentorderslist.png" alt="snapsale detail"/></a></li>
+					<li class="has-animation" data-delay="200"><a href="files/uploads/recentordersfinal.png" data-rel="lightcase"><img src="files/uploads/recentordersfinal.png" alt="snapsale detail"/></a></li>
+					
+				</ul>
+		</div>
+  	
+  	     <div class="wrapper-small">
+			<p class="alttitle">Mobile exploration</p>
+            <p>Making sure that my design would be as easy to use on mobile as it is on desktop was one of the most important considerations. Here are a few of the iterations I went through when trying to figure out some of the tougher solutions.</p>
+		</div>
+		
+		   <div class="spacer spacer-small"></div>
+          
+           <div class="wrapper">
+           	<ul class="gallery spaced">
+							<li class="has-animation"><a href="files/uploads/mobileiterations.png" data-rel="lightcase"><img src="files/uploads/mobileiterations.png" alt="snapsale journeys"/></a></li>
+            </ul>
+           </div>
    	
     <div class="wrapper-small">       
-            <h6><strong>Scalability</strong></h6>
-            <p>Currently, customers would receive snapsales from all stores that send them out. However, once Snapsale grows, we don’t want to overwhelm customers with a barrage of sales of things they may not remotely interest them. To fix this, stores could be broken down into genres (women’s clothing, men’s sportswear, jewelry, etc.) and customers could follow whatever genres they are interested in. Another option is a learning algorithm, which shows snapsales to users most likely to buy them based on past purchases.</p>
             
-            <h6><strong>Next steps</strong></h6>
-            <p>If I had more time, I would have loved to make a working prototype in Principle or Flinto, because I think a lot of the fun of interacting with the app will be in its subtle but delightful animations. For example, when a customer makes a purchase, a joyful animation (along with fun copy), would create a subconscious emotional reward.<br><br>
-
-Another thing to design would be the onboarding, or the first-time-user experience. How do we show the value app quickly to new users? How do they learn the flow of the app? How do we lead them to their first purchase and get them hooked?<br><br>
-
-The more obvious next step, of course, is actually building both the mobile app and its integration with Shopify. To be continued!</p>
+            <h6><strong>Thinking ahead</strong></h6>
+            <p>During initial brainstorming, we thought about a future opportunity to add further utility to a store’s customer base — a redesign of the customer index to allow merchants to perform a graph search on their customers (e.g. “top 50 customers who buy Nike”), which would then become dynamic segments which could be exported to Mailchimp (e.g. sending an email saying, “Get first dibs on our new shipment of Nike!”). This feature would be for V2, but I did do some exploration of the customer index which you can see below.</p>
 		</div> <!-- END .wrapper -->
 
         <div class="spacer spacer-small"></div>
@@ -224,11 +272,24 @@ The more obvious next step, of course, is actually building both the mobile app 
         <div class="wrapper">
         	
             <ul class="gallery spaced">
-							<li class="has-animation"><a href="files/uploads/snapsalemockup.png" data-rel="lightcase"><img src="files/uploads/snapsalemockup.png" alt="snapsale mockup"/></a></li>
+							<li class="has-animation"><a href="files/uploads/index.png" data-rel="lightcase"><img src="files/uploads/index.png" alt="customer profiles"/></a></li>
             </ul>
             
         </div> <!-- END .wrapper-mini -->
+        
+		<div class="wrapper-small">
+			<h6><strong>The final result</strong></h6>
+            <p>After a long summer diving deep into this design problem, here is the result, compared with the previous version. Welcome, new customer profile, you're looking much more human :)</p>
+		</div>
+       <div class="spacer spacer-small"></div>
 
+        <div class="wrapper">
+        	
+            <ul class="gallery spaced">
+							<li class="has-animation"><a href="files/uploads/beforeafter.png" data-rel="lightcase"><img src="files/uploads/beforeafter.png" alt="customer profiles"/></a></li>
+            </ul>
+            
+        </div> <!-- END .wrapper-mini -->
         <!-- Single Pagination -->
         <div class="wrapper">
             <ul class="single-pagination">

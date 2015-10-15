@@ -428,6 +428,7 @@ p pre, p code {
 	}
 	#page-body.nopadding { padding: 0; }
 
+
 .wrapper {
 	width: 1080px;
 	margin: 0 auto;
@@ -2264,3 +2265,9 @@ header:after { top: -130px; height: 130px; }
 header.header-open:not(.header-transparent) + #hero, header.header-open:not(.header-transparent) + #page-body { margin-top: 130px; }
 #header-filter, #header-share { top: -130px;	 min-height: 130px; }
 @media only screen and (max-width: 1024px) { nav#main-nav { top: 130px !important; } }
+
+
+#page-body.lesstop { padding-top: 110px; }
+#page-body lesstop {
+	
+}

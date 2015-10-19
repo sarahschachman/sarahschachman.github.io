@@ -2236,7 +2236,7 @@ span.highlight {
   background-color: rgba(15, 216, 197, 0.85);
 	color: white;
 	line-height: 130%;
-	font-size: 56px;
+	/*font-size: 56px;*/
 }
 
 h2.tagline {

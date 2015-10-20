@@ -103,7 +103,8 @@ html {
 	}
 
 body {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/*font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+	font-family: 'ProximaNova-Light-webfont', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	letter-spacing: 0.02em;
 	font-size: 16px;

@@ -150,7 +150,7 @@
    
     <div class="wrapper-small"> 
              <h6><strong>The Problem</strong></h6>
-<p>Recently, Shopify’s admin was simply a table of the customer's purchase history. While better than nothing, of course, this doesn’t help the merchant understand at a glance who this person is and how they should interact with them. There is a plethora of data sets in tables all over the admin, but the difference in the profile is that it represents a real person. Customers are not just tables of purchase data. The goal of this project was to redesign the customer profile to make it more human, and to give merchants the tools to gain a better understanding of the people that support their business.</p>
+<p>Recently, Shopify’s admin was simply a table showing the customer's purchase history. While better than nothing, of course, this doesn’t help the merchant understand at a glance who this person is and how they should interact with them. There is a plethora of data sets in tables all over the admin, but the difference in the profile is that it represents a real person. Customers are not just tables of purchase data. The goal of this project was to redesign the customer profile to make it more human, and to give merchants the tools to gain a better understanding of the people who support their business.</p>
            
             <h6><strong>Deliverable</strong></h6>
             <p>During my internship at Shopify, I worked on completely redesigning the customer profile section of the admin. Going off of research that had been done previously, I dove right into sketching ideas (about 3 gazillion of them). My work over the summer consisted of cycles of rough sketches of information architecture, wireframing and user flow studies, and high-fidelity mockups. By the time I left, the design was polished and prepared for implementation. The revamped profile should be shipping sometime soon :)</p>         	           	           	                	        	           	           	                	
@@ -158,11 +158,11 @@
             
             
             <h6><strong>Research and Brainstorming</strong></h6>
-            <p>Some background research had been done before I arrived, which included interviews with a few local merchants that had both an online and brick and mortar store. After sifting through the research, we identified a few pain points. Then, we had a brainstorming meeting to see what features we want to bring into the redesign, what information we can surface to best benefit the merchants, decide what is feasible, and prioritize our ideas.</p>
+            <p>Some background research had been done before I arrived, which included interviews with a few local merchants who had both an online and brick and mortar store. After sifting through the research, we identified a few pain points. Then, we had a brainstorming meeting to see what features we wanted to bring into the redesign, what information we could surface to best benefit the merchants, decided what was feasible, and prioritized our ideas.</p>
 
-           <p>We ended up with a list key goals we wanted our merchants to accomplish with the new customer profile (in the form of job stories):</p>
+           <p>We ended up with a list of key goals that we wanted our merchants to accomplish with the new customer profile (in the form of job stories):</p>
            <ul>
-           	<li>When a customer comes into a store, the merchant wants to quickly pull up their profile, so that the merchant can <strong>quickly see what kind of customer they are.</strong></li>
+           	<li>When a customer comes into a store, the merchant wants to pull up their profile, so that the merchant can <strong>quickly see what kind of customer they are.</strong></li>
            	<li>When the merchant pulls up a customer profile, they want to be able to quickly see the customer’s past orders, so that the merchant knows <strong>what kinds of products the customer likes.</strong></li>
            	<li>When the merchant pulls up a customer profile, they want to quickly see the customer’s lifetime value, so that the merchant knows <strong>how important the customer is to the business.</strong></li>
            	<li>When the merchant pulls up a customer profile, the merchant wants to see what brand the customer usually buys, so that the merchant can <strong>let the customer know about new items that came in.</strong></li>
@@ -170,7 +170,7 @@
            	<li>When a merchant onboards a new staff member, the merchant wants to quickly pull up the business’s most important customers, so that the staff member <strong>recognizes the important customers when they enter the store.</strong></li>
            	<li>After a customer leaves the store, the merchant wants to quickly write down a note about the interaction, so that the merchant can <strong>follow up with the customer later.</strong></li>
            </ul>
-           <p>With these key goals in mind, I started sketching out possible layouts. I had to keep information architecture in mind — what is the most critical information to be displayed, and what is the hierarchy going to look like? I also had to be creative with data visualizations. I needed to make the profile quick and easy to digest. Tables of data was exactly what I needed to steer away from. My main goal was to take this heap of data about a customer, and make it look more like the human it is representing.</p>
+           <p>With these key goals in mind, I started sketching out possible layouts. I had to keep information architecture in mind — what is the most critical information to be displayed, and what is the hierarchy going to look like? I also had to be creative with data visualizations. I needed to make the profile quick and easy to digest. Tables of data were exactly what I needed to steer away from. My main goal was to take this heap of data about a customer, and make it look more like the human it represented.</p>
             
 		</div>
          
@@ -190,7 +190,7 @@
             <h6><strong>The Design Process</strong></h6>
             <p>I completed a multitude of rough sketches and wireframes and received a ton of wonderful feedback from my mentor. After I decided on a few designs I liked, I started designing more high-fidelity versions in Sketch. There are an insane number of iterations that show the design progression. Shopify's twice-weekly feedback sessions were essential to helping me push my designs further.</p>
             <p class="alttitle">Layout and components</p>
-            <p>All of Shopify's pages in the admin are formed with sets of primary cards (large and on the left) and secondary cards (smaller, subdued visual treatment, and on the right). While I did need to stay within Shopify's style guide, I had a lot of flexibilty in how to arrange the components and what the hierarchy would look like. Here are all the components I decided to implement on the page, each which serves a certain purpose in furthering the goals outlined above:</p>
+            <p>All of Shopify's pages in the admin are formed with sets of primary cards (large and on the left) and secondary cards (smaller, subdued visual treatment, and on the right). While I did need to stay within Shopify's style guide, I had a lot of flexibilty in how to arrange the components and what the hierarchy would look like. Here are all the components I decided to implement on the page, each serving a certain purpose in furthering the goals outlined above:</p>
             <ul>
             	<li><strong>The persona card:</strong> this is the first card on the profile, and the most important. We want the merchant to be able to look at this card and immediately understand the customer.</li>
             	<li><strong>Order history card:</strong> this component is all about the data. One of the most important pieces needed to understand a customer's value to a company is their spending history data, and this card helps the merchant visualize the customer in terms of their data through graphs.</li>
@@ -205,7 +205,7 @@
             
 
 			<p class="alttitle">Badges and primary card</p>
-            <p>The primary card of the profile needs to show what the merchant needs to know about the customer at a glance. This includes key metrics and their persona badges. The persona badges serve as a quickly identifiable representation of the customer, so that the merchant can immediately see what kind of customer this person is, and how important they are to the business. These badges would automatically show up on the profile if the customer meets certain requirements based upon their purchase history. This is the card that I played around with the most, because it is difficult to decide what kind of information is going to be the most important -- you can't overwhelm the user with dense information, and so I needed to keep it simple and to the point. I tried the primary card with a map of the customer's address, a histogram of their spending, and photos. In the end, I decided to go minimal and cut out superfluous or distracting information, and just focus on the persona badges, three key performance indicators, freeform notes, and a photo to humanize and distinguish the profile.</p>
+            <p>The primary card of the profile should show the merchant what they need to know about the customer at a glance. This includes key metrics and their persona badges. The persona badges serve as a quickly identifiable representation of the customer, so that the merchant can immediately see what kind of customer this person is, and how important they are to the business. These badges would automatically show up on the profile if the customer meets certain requirements based upon their purchase history. This is the card that I played around with the most, because it is difficult to decide what kind of information is going to be the most important -- you can't overwhelm the user with dense information, and so I needed to keep it simple and to the point. I tried the primary card with a map of the customer's address, a histogram of their spending, and photos. In the end, I decided to go minimal and cut out superfluous or distracting information, and just focus on the persona badges, three key performance indicators, freeform notes, and a photo to humanize and distinguish the profile.</p>
 		</div>
 		
 		   <div class="spacer spacer-small"></div>
@@ -217,7 +217,7 @@
            </div>
 
   	 <div class="wrapper-small">
-           	<p class="alttitle">Graph exloration</p>
+           	<p class="alttitle">Graph exploration</p>
             <p>Deciding how to synthesize a customer's purchase data to make it easy to digest and comprehend was one of the trickier parts of the process. I had to delve deep into data visualization best practices to come up with a solid representation.</p>
            </div>
            
@@ -233,8 +233,8 @@
 		</div>
   	
   	<div class="wrapper-small">
-           	<p class="alttitle">Recent purchases exloration</p>
-            <p>Being able to view a customer's past orders is one of the key components of the customer profile, and has a lot to tell about the type of customer they are. However, in the previous version of customer profiles, merchants can only view the customer's orders as a list. While this makes it easy to scan and compare, it doesn't help the merchant understand the customer at a glance. I wanted to show the orders in such a way that merchants could spot trends by viewing the orders along with their contents.</p>
+           	<p class="alttitle">Recent purchases exploration</p>
+            <p>Being able to view a customer's past orders is one of the key components of the customer profile, and tells a lot about the type of customer they are. However, in the previous version of customer profiles, merchants could only view the customer's orders as a list. While this made it easy to scan and compare, it didn't help the merchant understand the customer at a glance. I wanted to show the orders in such a way that merchants could spot trends by viewing the orders along with their contents.</p>
            </div>
            
 		<div class="spacer spacer-small"></div>
@@ -264,7 +264,7 @@
     <div class="wrapper-small">       
             
             <h6><strong>Thinking ahead</strong></h6>
-            <p>During initial brainstorming, we thought about a future opportunity to add further utility to a store’s customer base — a redesign of the customer index to allow merchants to perform a graph search on their customers (e.g. “top 50 customers who buy Nike”), which would then become dynamic segments which could be exported to Mailchimp (e.g. sending an email saying, “Get first dibs on our new shipment of Nike!”). This feature would be for V2, but I did do some exploration of the customer index which you can see below.</p>
+            <p>During initial brainstorming, we thought about a future opportunity to add further utility to a store’s customer base — a redesign of the customer index to allow merchants to perform a graph search on their customers (e.g. “top 50 customers who buy Nike”), which would then become dynamic segments that could be exported to Mailchimp (e.g. sending an email saying, “Get first dibs on our new shipment of Nike!”). This feature would be for V2, but I did do some exploration of the customer index, as shown below.</p>
 		</div> <!-- END .wrapper -->
 
         <div class="spacer spacer-small"></div>

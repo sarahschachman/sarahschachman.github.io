@@ -87,9 +87,49 @@ audio:not([controls]) { display: none; }
 
 
 @font-face {
-     font-family: ProximaNova-Light-webfont;
-     src: url('files/fonts/ProximaNova-Light-webfont.ttf'); 
+     font-family: ProximaNova-Light;
+     src: url('files/fonts/ProximaNova-Light-webfont.ttf');
+		 font-weight: normal;
+		 font-style: normal;
 }
+@font-face {
+     font-family: ProximaNova-Light;
+     src: url('files/fonts/ProximaNova-LightItalic.otf');
+		 font-weight: normal;
+		 font-style: italic;
+}
+@font-face {
+     font-family: ProximaNova-Light;
+     src: url('files/fonts/ProximaNova-Semibold.otf');
+		 font-weight: bold;
+		 font-style: normal;
+}
+@font-face {
+     font-family: ProximaNova-Light;
+     src: url('files/fonts/ProximaNova-SemiboldItalic.otf');
+		 font-weight: bold;
+		 font-style: italic;
+}
+
+@font-face {
+     font-family: ProximaNova-Bold;
+     src: url('files/fonts/ProximaNova-Bold.otf');
+		 font-weight: normal;
+		 font-style: normal;
+}
+@font-face {
+     font-family: ProximaNova-Bold;
+     src: url('files/fonts/ProximaNova-BoldIt.otf');
+		 font-weight: normal;
+		 font-style: italic;
+}
+@font-face {
+     font-family: ProximaNova-Bold;
+     src: url('files/fonts/ProximaNova-Extrabold.otf');
+		 font-weight: bold;
+		 font-style: normal;
+}
+
 
 /*----------------------------------------------
 1. BASICS
@@ -103,8 +143,8 @@ html {
 	}
 
 body {
-	/*font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
-	font-family: 'ProximaNova-Light-webfont', Helvetica, Arial, sans-serif;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/*	font-family: 'ProximaNova-Light', Helvetica, Arial, sans-serif;*/
 	font-weight: 300;
 	letter-spacing: 0.02em;
 	font-size: 16px;
@@ -124,6 +164,7 @@ body {
 ---------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Montserrat';
+
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
